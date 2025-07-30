@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DevJobs - Tech Job Listing Board</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <div class="header-content">
+      <h1>DevJobs</h1>
+      <nav class="top-nav">
+        <a href="#">Post a Job</a>
+        <a href="#">Login</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="container">
+
+    <aside class="filters" aria-label="Job Filters">
+      <input type="text" placeholder="Search by title..." />
+      <select>
+        <option value="">All Locations</option>
+        <option value="remote">Remote</option>
+        <option value="bangalore">Bangalore</option>
+        <option value="hyderabad">Hyderabad</option>
+      </select>
+      <select>
+        <option value="">All Tech Stacks</option>
+        <option value="react">React</option>
+        <option value="nodejs">Node.js</option>
+        <option value="python">Python</option>
+      </select>
+      <select>
+        <option value="">Experience</option>
+        <option value="entry">Entry Level (0-1 years)</option>
+        <option value="mid">Mid Level (2-5 years)</option>
+        <option value="senior">Senior Level (6-10 years)</option>
+      </select>
+    </aside>
+
+    <section class="job-list" aria-label="Job Listings">
+
+      <div class="job-card">
+        <img src="data:image/png;base64,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" alt="Google Logo" class="company-logo" />
+        <div class="job-details">
+            <h3>Frontend Developer</h3>
+            <p class="company-name">Cure Fit</p>
+            <p class="location">Bangalore, India</p>
+            <div class="tags">
+            <span class="tag">HTML</span>
+            <span class="tag">CSS</span>
+            <span class="tag">React</span>
+            </div>
+            <button class="apply-btn">Apply</button>
+        </div>
+      </div>
+
+
+      <div class="job-card">
+        <img src="data:image/jpeg;base64,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" alt="Google Logo" class="company-logo" />
+        <div class="job-details">
+            <h3>Backend Engineer</h3>
+            <p class="company-name">Brainey</p>
+            <p class="location">Hyderabad, India</p>
+            <div class="tags">
+            <span class="tag">NodeJS</span>
+            <span class="tag">MongoDB</span>
+            </div>
+            <button class="apply-btn">Apply</button>
+        </div>
+      </div>
+
+      <div class="job-card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-1K4zFXxhNi5znq1KTkBtRkl7eJSGc04cgA&s" alt="Google Logo" class="company-logo" />
+        <div class="job-details">
+            <h3>Web Developer</h3>
+            <p class="company-name">Micron</p>
+            <p class="location">Noida, India</p>
+            <div class="tags">
+            <span class="tag">HTML</span>
+            <span class="tag">CSS</span>
+            <span class="tag">React</span>
+            </div>
+            <button class="apply-btn">Apply</button>
+        </div>
+      </div>
+
+      <div class="job-card">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAABuVBMVEX////iL0bSMFjdMUxxNpXPJkHFL1/IKlKzMXvAMWjbME9XOZajNJTXMFOQNZR/NZToND+JNZTPMVy1L3GnPIXGLVm6NXOhQYqxMX/DMGLKKU7uOTezOHubNZSvMYK1OHisMoevOH+BNZSnMpC9M27MKEhLOZZlN5WfNZTlMkLzc0SdQoz1h0n0gUj2kk3jMEWXRZHj4+P6rVnExMTvSjn3m1HyaUDW1tbOzs62traQSJfs7OyioqL42Nvr5+/3mlDhFjXyp6trJ5Dr3uvNEzZtGYzOTWNEMJP56u2Pj496enrhx93zx8ucFIvWsdDvsbjNn8fAgrbogIusSpvkR1qzca7jbn+SFoupXKXCfbGiDYXgAC3ttr+mEX3s1uS5jLzli5rseH/oQUvap8LWR2fTu9eBHo3HdKCtCm7oEyGqerPceZCbYqfSYX/1pKO0EGLKS3LZk6ryeW/uNR3vVULLaY/CToDmwNCymsS6ZaDnYm/MhqljFoyRbax/V6O5UZGcibvxmHpDG4371sP3gjPRyd75vZlkRpr4p23qaU+LVKH+8OPhUlCup8r9q0SYj73KanoxFIxpaWmTOwuEAAAL1ElEQVR4nO2c+1vTyBqAU6BAKUXYWpaLKHKRRXcXY1zSmFBrC5IieFuEVS6iQgV0twddvBxRWVxdj7c9x7/4zKS3NPPNpNCmzT7PvI8/gJ1J5uX78mWaTCIIHA6Hw+FwOBwOh8PhcDgcDofD4XA4HA6Hw+FwOBwOh8PhcDgcDofD4XA4LuDSAfpMl30UTjJzed9drkTLPwznuDozs+8+Hs8FB0biFPPNzdf22eW6p3bEkbE4wrXm5uaZ5X11GYvW1npWnBlO+YnMf4cUf95Xn1lPbW3tuO7QiMrNjR5suK9icyWKDWvnHBtTWYnPG4b9t/bRJ+rBhk3jY46Nqpz80mMYNvffLLrL9eG0YdO/HRxX2bg0nzW8VWyxGVvwZAzH/wmn/Z6erGF/scVmdiRr2BRwdGxlYW0+b7hUXLFBZSZn6F10eHyl02OKYe9SUV0MwYyh+4N4dd5s2FtMsbkzbDZscvvcLdlSYLhkX2yMMmOKYVMFRlkCt1sKsrS397VtF6PMmA1XnB/mwYkkrYZL92y6XIhaDANeN8/dNlushkdtio2+kD4KTYZNLp67xZOk4dH7zC53WoetMQx43Tt3e9gCGK6zis3YxvAIYRi4WLER75NLSciw4zijy93WESJLA4FBt87dzrWAhuv0YnNhoXWYzNJAzWoFR70P1pKwYcc6rTiiMoMgY1gTcOfcra2NYthIKzZ3oq1gltbU1FR05EVyOUk1pBSbsY3WVjhLawJXKjz6YkjSY9h4BOxxFwuOgIY1XRUefRHcZhmCxeZCtxFCOEu7ViotYEcECdING4Fio+McpRrWdLlt7rbZxzQMksXmUTfTsOZBFSwYxJM2hilrsZk2QogVYcNvXBbEh302hsFjlh6t3TaG3/xaFRMKyxO2hqnCYvPbRndGEJiXpg0b3DQB/9BnaxhMmbNO3+i2jWHoX1XzIVibKMIwuG3q8ag7Z0iNYSj0tGpGVg4dKsKw3VRspjfyhvAZHxvWd1bRqYDLyWIMBwYGcj3OdmcNh1mG9W6ZgMeKi+FAaivT4bfHeUPKrC0dQ5cE8Vmxhr5MsdEfm2NIPw6R4ZbNvitCZOJQUYYoTX3pYvPIECzmOPR1uuG0vxkr3rATV8fpx2cLjkPq2QIZ+lwwdzNCWGSl8fl8qMfvZ80xZB6HPl+q+kF8eahIw3Ys6NtCZabAkHkcog7b9kNwlvgEbHhjbQaMYecYEgSOw+jiHGxITNkrzYc60HBGF34mjkMcQ1/XWchwZFbQx0HDgSfVFVybAA3xOozlW9YsNWLou1tgmDnjL6BZ9hUPaJiq7tytrg40NG5v3wSztLO+0NCoNMPGrYrZWsiwvb2agmsx0HA+jj/UcRCJGHZ2zpIxjBoVUx8HDVN2t6+cJAbGcP5q+tOrS+RxiGLYSRyH0cx93xWPdU5jxDBYPcFnsGFP9nM4S+trCmI4gk4X2Q4BMEuDVQuiulMHGc7n6vulJSBL6+vr7xae8aO5GzFj45Bhe7Bap/3dGGhoWnf5HMrS+lDobEGWmhZCXYcNX1ReDhMxQkgamproS1AMQ6Fas+GCOUKg4THqvR1neRmDDOfXzG1ewIah1rxhdMXcYXEcMjzGvpHsEPF0CK2GvxS2gipNKNTQla80rYUd5iDDI8wbyU7xqg4yTEYKW11ego7DhobhrOGC5S6T7oUMj9ivWik7b3cgw+RVa7vXUJY2NDRks3TW2uFCE2TYcZDnG0pjaAgyPEe0i6/DhrVpww3ysu8qZHictRrAEdZikGEyTra8Dxs2GILRO2SHMa9lTmMYduz/CY7SGIJimLwNNV3PX8Uw5qVpw65BHMQF6DSwEoBieNRhIwvPYmCWgm3vrUMx7OoaQYLwQkQwS49Wdu62N5QLYt4wSakGx8mzBTbsam29C3eYHiSz9PjxXodcQHaHoCzdpLReXifPFtjQs0FbGfQAiOHhwxWcu0X2/IBhktr+Ppilg4NAmckQgAx7I9T25eal309maXKN2v6PDihLBwfpixAXA4Dh4eIfbyiR+J4fyNKH1PZv/rzYCMZwnH7n5SJk2AucjBzhld9PZGmbdbpm4vvvf4CzdHCc2kfvAgwPP3dCh+Ttnp+MYfIZtf07ZPioETZcofbaqgEM+yszd/vLDxiS07UsH/9Ehj8MZK55Fxp6GU+rrQKG337rhJCVNRRCIksn6EfI+x+x4X8aoRh6vfTFsmMNgGE/vZyVD7+fjCE8XTN486NhePJiEDRkFJuVEBDDU04oFfJ50g/EkN7+/Pm04UnY0Ould4Wy9JTzE3AjRy3nwwl6AXiXM/wUBA0ZxeZpCDDsoTYvE39P+skYvqQ2/3j+p6zhSR8cwyi92Gx3koaniO/Y5SVChBAZTqjU9u9/yht+gg0ZxUaHDHucnbvtTpKGE/T69uaLyXB0FTZkFJvFTtLw1H6fg98X8b0TfuI4/EBvf+aM2XB0ADT00mc2whPS8HSPk3O3V5Mmw0wMJ+hZ8w4ZnjcZzlIMr1O3oKdIw9M3nFBL83bvBGEYo0/XPn6xGI7Cht4F+irErRRp2OLcxdO/TpCGdfTm789YsnT00wBo6CEuKeYBYnia/jWmRNb2coa5w3DnLbX5my+E4Wi9DzKsjdIfPlhOkYYtTs3dJk8QhrFdevMzmMIsHf0dNhyJ0jfzIkgYnqPP80vis8kwm6UxevN3kOHoKmjoGaYXGyFFGrY5M3fDOWox3KGnCy4zaUVj6p01HIUNPYxi8zRFxrDNCcG/Jy2GQ3Ux+nRNuPLrfzPMXcyxujobohgyHuHeJg3P0Sv4gYmkQ1hwHO6wJlDPZ/pza4Y6TBdMQcMoI0sFPXiMMGwr/9zt5SRhGPvM7PEaXDEE11L6dUXMvUbC8Bzt4uzB2f3fpMVwKGbzdzzcT67cAw3HbV5popOGffTv3Acmsrs3aak0dorA2kRw1sY44WP0IFFLbzvzBSOC41hQS20UdesKWtiwlr1bfBgWztoc8sPgOOaztAjFpWJiyN6nbjnj9zjoh8k4DuUmNezdxZdsK43N66/0wnnpdw77YdKO+e8W7D0uL9nE0ObVUHrhFeFrlbk5gxxN3y1sFJ+uM4/DqI1gwb2nCvlhIrs7+asYtooMwyj73QK66T7+0ZuVXRiFHGO5a21sRdpdbmQYZT/2k78S1bh+v/ILvyIvd3Ir99iKW+uUGI6z3yek51buVcMPE9ncya4RZiu+WAcrDeNiMEbPXNUPpqrkh8FxTN97Yiveh7LUy5ptY8HMSvYq+mEim+lnZhg3SDHbpCHjHjdGT98/TG1X/6EZw7Gvz+brzBNrlg6yX0KjG88f1rvAD4MdbRXbLZWG/YIW3XhK9oE7/DCRTfw8PlNRt6zFYG5Pxy9VcJEfBjkmbRRT5hW0zNHrNYFBl/lhsKONYs7QRjDgdaEfJn6DrTiWyhh2MSej+vicO/0w8RvM+0LTKcPQRnDOTe9SIGHf+XqKl5c22My2yzmcyrNY3xlyy0P2DrHV4IoH0J3ErS+b43A4HA6Hw+FwOBwOh8PhcDgcDofD4XA4HA6Hw+FwOBwOh8PhcDj/VFTiB6iFqrLblD4IaNOqqhLt4IbA/ymCIkqSHBYS4bAkhGUJIQuKlBBVUZZEVQqLsqbJ6IMwaiUpCQn/rIUFSZREUUA/lIgyJYoK2hjaAdot2rSkSIKmamE0EE2RVEVUlIQiSfh3NExJSgiapsiypAgaao4Gr4jpwaG+iiyGrSOSJGEK7UFCW5c0QdJk5CCFVUURhISiaQlJ01RJ1hT0sTKlyRpqJWnqlCKrioqGMqWVapiQZbQvRZ0SEpoSRpsWptColERC+KpKU4KkJvCf9Stqp8hIOIxGpoloKGFNQKMSvwraVwFvAA1LRE0VTbHsQBbRn0mTZUGUZVGQUZjEsChIYfwL/h1FUgyrYlhGbXBQEWH0B0fdcAxRu1INVREJoX0YkVPREAUZ7Q9lEIopigcehhrGe1JFFcUQBQv9XxiPAneVcJKJeAPGsFAjGRoRUiliJKWq2G8f/ys56zkcDqeC/B+S/ktxEFsJjgAAAABJRU5ErkJggg==" alt="Google Logo" class="company-logo" />
+        <div class="job-details">
+            <h3>Full Stack Developer</h3>
+            <p class="company-name">Amazon</p>
+            <p class="location">Pune, India</p>
+            <div class="tags">
+            <span class="tag">React</span>
+            <span class="tag">NodeJS</span>
+            <span class="tag">SQL</span>
+            </div>
+            <button class="apply-btn">Apply</button>
+        </div>
+      </div>
+
+      <div class="job-card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6TfoASGOcXmB9gLuGfRaAyIM6UQXBox0Jgg&s" alt="Google Logo" class="company-logo" />
+        <div class="job-details">
+            <h3>Software Engineer</h3>
+            <p class="company-name">Infrasity</p>
+            <p class="location">Bangalore, India</p>
+            <div class="tags">
+            <span class="tag">NodeJS</span>
+            <span class="tag">ReactJS</span>
+            <span class="tag">Java</span>
+            </div>
+            <button class="apply-btn">Apply</button>
+        </div>
+      </div>
+
+      <div class="job-card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWHgdaRu0oBMPSNI98JeSxE0kNnsXiciEVbw&s" alt="Google Logo" class="company-logo" />
+        <div class="job-details">
+            <h3>Junior Software Developer</h3>
+            <p class="company-name">FSM Global</p>
+            <p class="location">Chennai, India</p>
+            <div class="tags">
+            <span class="tag">HTML</span>
+            <span class="tag">CSS</span>
+            <span class="tag">SQL</span>
+            </div>
+            <button class="apply-btn">Apply</button>
+        </div>
+      </div>
+
+      <div class="job-card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8kjNASp-t4VymZrnRo9hIMRSeTcWNarxbJw&s" alt="Google Logo" class="company-logo" />
+        <div class="job-details">
+            <h3>Frontend Developer</h3>
+            <p class="company-name">Google</p>
+            <p class="location">Bangalore, India</p>
+            <div class="tags">
+            <span class="tag">HTML</span>
+            <span class="tag">CSS</span>
+            <span class="tag">React</span>
+            </div>
+            <button class="apply-btn">Apply</button>
+        </div>
+      </div>
+
+      <div class="job-card">
+        <img src="data:image/png;base64,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" alt="Google Logo" class="company-logo" />
+        <div class="job-details">
+            <h3>Frontend Developer</h3>
+            <p class="company-name">Google</p>
+            <p class="location">Bangalore, India</p>
+            <div class="tags">
+            <span class="tag">HTML</span>
+            <span class="tag">CSS</span>
+            <span class="tag">React</span>
+            </div>
+            <button class="apply-btn">Apply</button>
+        </div>
+      </div>
+
+      <div class="job-card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRv07rpuJ0Aty_et96rEdcjlo74vraL7y4L6Q&s" alt="Google Logo" class="company-logo" />
+        <div class="job-details">
+            <h3>Frontend Developer</h3>
+            <p class="company-name">Google</p>
+            <p class="location">Bangalore, India</p>
+            <div class="tags">
+            <span class="tag">HTML</span>
+            <span class="tag">CSS</span>
+            <span class="tag">React</span>
+            </div>
+            <button class="apply-btn">Apply</button>
+        </div>
+      </div>
+
+
+    </section>
+
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f4f6f8;
+  color: #333;
+}
+
+header {
+  background-color: #2d3748;
+  color: white;
+  padding: 1rem 2rem;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+header h1 {
+  font-size: 2rem;
+}
+
+.top-nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 1rem;
+  font-size: 0.9rem;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.filters input,
+.filters select {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  flex: 1;
+  min-width: 150px;
+}
+
+.job-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.job-card {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease;
+}
+
+.job-card:hover {
+  transform: scale(1.02);
+}
+
+.job-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.company-name {
+  color: #555;
+  margin-bottom: 0.5rem;
+}
+
+.job-details {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 0.5rem;
+}
+
+.tags {
+  margin-bottom: 1rem;
+}
+
+.tag {
+  background-color: #e2e8f0;
+  color: #2d3748;
+  padding: 0.3rem 0.6rem;
+  margin-right: 0.5rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  display: inline-block;
+}
+
+.apply-btn {
+  background-color: #3182ce;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.apply-btn:hover {
+  background-color: #2b6cb0;
+  box-shadow: 0 0 10px #48bb78;
+}
+
+@media screen and (max-width: 600px) {
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  .top-nav {
+    justify-content: center;
+    margin-top: 1rem;
+  }
+}
+
+
+.job-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 16px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  margin-left: 50px;
+}
+
+.company-logo {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.job-details {
+  flex: 1;
+}
+
+.tags {
+  margin-top: 8px;
+}
+
+.tag {
+  display: inline-block;
+  background-color: #e0f7fa;
+  color: #00796b;
+  padding: 4px 8px;
+  margin: 2px;
+  border-radius: 4px;
+  font-size: 12px;
+}
+
+.apply-btn {
+  margin-top: 12px;
+  background-color: #00b894;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
